@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prestamo equipos guia</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+        <header role="banner">
+                <nav class="navbar navbar-expand-lg  bg-dark">
+                  <div class="container-fluid">
+                    <a class="navbar-brand element-animate" href="https://gpoguia2.com"><img src="images/logo-guia-original.svg" style="width: 240px;"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                      <span style="font-size: 35px;color: #002b49;"><i class="fa fa-bars"></i></span>
+                    </button>
+          
+                    <div class="collapse navbar-collapse" id="navbarsExample05">
+                      <div class="navbar-nav ml-auto">
+                        <ul class="navbar-nav pl-md-5 mr-auto">
+                       
+                        <!--<li class="nav-item element-animate">
+                          <a class="nav-link" href="https://gpoguia2.com/Evaluacion" target="_blank">Evaluación de asesores</a>
+                        </li>-->
+                        <!--<li class="nav-item element-animate">
+                          <a class="nav-link" href="javascript:void(0);" data-toggle="modal" data-target="#notifications"><i class="fa fa-bell"></i></a>
+                        </li> -->
+                      </ul>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </nav>
+              </header>
+
+
+
+    <div class="root">
+        <form action="" class="form-register">
+            <div class="form-register__header">
+                <ul class="progressbar">
+                    <li class="progressbar__option active">paso 1 </li>
+                    <li class="progressbar__option">paso 2</li>
+                    <li class="progressbar__option">paso 3</li>
+                    <li class="progressbar__option">paso 4</li>
+                    <li class="progressbar__option">paso 5</li>
+                </ul>
+                <h1 class="form-register__title">Registro prestamo de equipos</h1>
+            </div>
+            <div class="form-register__body">
+                <div class="step active" id="step-1">
+                    <div class="step__header">
+                        <h2 class="step__title">Datos del usuario</h2>
+                    </div>
+                    <div class="step__body">
+                            <input type="text" id="nombreU" placeholder="Nombre" class="step__input" id="nom"> 
+                            <input type="text" id="ap" placeholder="Apellido Paterno" class="step__input" id="ap">
+                            <input type="text" id="am" placeholder="Apellido Materno" class="step__input" id="am">
+                            <input type="text" id="depto" placeholder="Departamento" class="step__input" id="dep" >
+                            <input type="text" id="puesto" placeholder="Puesto" class="step__input"  id="pu" >
+                    </div>
+                    <div class="step__footer">
+                        <index name="1" id="1"  type="button" class="step__button step__button--next" data-to_step="2" data-step="1">Siguiente</button>
+
+                    </div>
+                </div>
+                <div class="step" id="step-2">
+                    <div class="step__header">
+                        <h2 class="step__title">Información del equipo</h2>
+                    </div>
+                    <div class="step__body">
+                            <input type="text" id="departamento" placeholder="Departamento" class="step__input">
+                            <input type="text" id="tipo" placeholder="Tipo" class="step__input">
+                            <input type="text" id="marca" placeholder="Marca" class="step__input">
+                            <input type="text" id="modelo" placeholder="Modelo" class="step__input">
+                            <input type="text" id="nserie" placeholder="Numero de Serie" class="step__input">
+                            <input type="text" id="sistema" placeholder="Sistema Operativo" class="step__input">
+                            <input type="text" id="office" placeholder="Office" class="step__input">
+                            <input type="text" id="obser" placeholder="Observaciones" class="step__input">
+                    </div>
+                    <div class="step__footer">
+                        <button type="button" class="step__button step__button--back" data-to_step="1" data-step="2">Regresar</button>
+                        <button type="button" class="step__button step__button--next" data-to_step="3" data-step="2">Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-3">
+                    <div class="step__header">
+                        <h2 class="step__title">Caracteristicas del equipo</small></h2>
+                    </div>
+                    <div class="step__body">
+                            <input type="text" placeholder="Pantalla" class="step__input" name="no">
+                            <input type="text" placeholder="Procesador" class="step__input">
+                            <input type="text" placeholder="Ram" class="step__input">
+                            <input type="text" placeholder="Disco Duro" class="step__input">
+                            <input type="text" placeholder="Cargador" class="step__input">
+                            <input type="text" placeholder="Tarjeta de red" class="step__input">
+                    </div>
+                    <div class="step__footer">
+                        <button type="button" class="step__button step__button--back" data-to_step="2" data-step="3">Regresar</button>
+                        <button type="button" class="step__button step__button--next" data-to_step="4" data-step="3">Siguiente</button>
+                    </div>
+                </div>
+
+
+                <div class="step" id="step-4">
+                        <div class="step__header">
+                            <h2 class="step__title">Firma Solicitante</h2>
+                        </div>
+                        <div class="step__body">
+                                <canvas class="firma" id="Solicitante"style="border:1px solid #000000;">
+                                    </canvas>
+                        </div>
+                        <div class="step__footer">
+                                <button type="button" class="step__button" onclick="clearcanvas1();">Limpiar firma</button>
+                                <button type="button" class="step__button step__button--back" data-to_step="3" data-step="4">Regresar</button>
+                                <button type="button" class="step__button step__button--next" data-to_step="5" data-step="4">Siguiente</button>
+                                
+                        </div>
+                    </div>
+
+
+
+                    <div class="step" id="step-5">
+                            <div class="step__header">
+                                <h2 class="step__title">Firma Aval</h2>
+                            </div>
+                            <div class="step__body">
+                                    <canvas  class="firma" id="Aval" style="border:1px solid #000000;">
+                                        </canvas>
+                            </div>
+                            <div class="step__footer">
+                                    <button type="button" class="step__button" onclick="clearcanvas2();">Limpiar firma</button>
+                                    <button type="button" class="step__button step__button--back" data-to_step="4" data-step="5">Regresar</button>
+                                    <button type="submit" class="step__button step__button--next" data-to_step="5" data-step="4">Finalizar</button>
+                            </div>
+                        </div>
+
+            </div>
+        </form>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/nouislider/nouislider.min.js"></script>
+    <script src="js/wnumb/wNumb.js"></script>
+    <script src="js/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="js/jquery-validation/dist/additional-methods.min.js"></script>
+
+</body>
+</html>
